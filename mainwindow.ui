@@ -7,8 +7,26 @@
     <x>0</x>
     <y>0</y>
     <width>813</width>
-    <height>603</height>
+    <height>620</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>813</width>
+    <height>620</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>813</width>
+    <height>620</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -35,12 +53,30 @@ color : rgb(255, 204, 0);
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>500</width>
+     <height>600</height>
+    </size>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QWidget" name="hwidget" native="true">
       <property name="minimumSize">
        <size>
-        <width>50</width>
+        <width>802</width>
+        <height>84</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>131</width>
         <height>67</height>
        </size>
       </property>
@@ -56,6 +92,9 @@ background-color: rgba(186, 189, 182,0.5);
          <property name="font">
           <font>
            <pointsize>13</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <underline>true</underline>
           </font>
          </property>
          <property name="text">
@@ -74,7 +113,7 @@ background-color: rgba(186, 189, 182,0.5);
          <property name="sizeHint" stdset="0">
           <size>
            <width>613</width>
-           <height>20</height>
+           <height>63</height>
           </size>
          </property>
         </spacer>
@@ -268,7 +307,7 @@ background-color: rgba(186, 189, 182,0.5);
             </property>
             <property name="maximumSize">
              <size>
-              <width>56</width>
+              <width>272</width>
               <height>56</height>
              </size>
             </property>

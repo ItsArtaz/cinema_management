@@ -1,13 +1,13 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "login.h"
+#include "ui_login.h"
 #include "QTimeEdit"
 #include "QLabel"
 #include "QString"
 #include "QDateEdit"
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+Login::Login(QWidget *parent, QMainWindow *mw) :
+    QMainWindow(parent),
+    ui(new Ui::Login)
 {
     ui->setupUi(this);
     QString date = QDate :: currentDate().toString();
@@ -16,19 +16,16 @@ MainWindow::MainWindow(QWidget *parent)
     QString time = QTime :: currentTime().toString();
     QLabel *timel=new QLabel(time);
     ui->statusbar->addWidget(timel);
-    login = new Login(0,this);
+    this->mw=mw;
 }
 
-MainWindow::~MainWindow()
+Login::~Login()
 {
     delete ui;
 }
-
-
-void MainWindow::on_pushButton_3_clicked()
+void Login::on_back_btn_clicked()
 {
-    this->hide();
-    login->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    login->show();
+    this->close();
+    mw->show();
 }
 
