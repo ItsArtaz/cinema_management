@@ -50,6 +50,11 @@ color : rgb(255, 204, 0);
 {
     background-color:black;
 color : rgb(255, 204, 0);
+}
+#pushButton,#pushButton_2,#pushButton_3,#pushButton_4
+{
+border-width : 0px;
+border-radius : 8px;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
