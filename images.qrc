@@ -2,6 +2,8 @@
     <qresource prefix="/image">
         <file>geoffrey-moffett-TFRezw7pQwI-unsplash.jpg</file>
         <file>gr-stocks-q8P8YoR6erg-unsplash.jpg</file>
+        <file>thibault-penin-3HInbCmQ8ro-unsplash.jpg</file>
+        <file>javier-esteban-hAlFVYJ1BWw-unsplash.jpg</file>
     </qresource>
     <qresource prefix="/icons">
         <file>cross.png</file>

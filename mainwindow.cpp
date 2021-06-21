@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     QLabel *timel=new QLabel(time);
     ui->statusbar->addWidget(timel);
     login = new Login(0,this);
+    signup = new Signup(0,this);
 }
 
 MainWindow::~MainWindow()
@@ -30,5 +31,13 @@ void MainWindow::on_pushButton_3_clicked()
     this->hide();
     login->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     login->show();
+}
+
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    this->hide();
+    signup->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    signup->show();
 }
 
