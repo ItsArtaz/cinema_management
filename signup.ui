@@ -270,6 +270,9 @@ border-radius : 8px;
               <bold>false</bold>
              </font>
             </property>
+            <property name="statusTip">
+             <string>Enter Your Password</string>
+            </property>
             <property name="echoMode">
              <enum>QLineEdit::Password</enum>
             </property>
@@ -325,6 +328,9 @@ border-radius : 8px;
              <font>
               <pointsize>16</pointsize>
              </font>
+            </property>
+            <property name="statusTip">
+             <string>Enter Your Username</string>
             </property>
            </widget>
           </item>
@@ -438,6 +444,9 @@ border-radius : 8px;
               <width>56</width>
               <height>56</height>
              </size>
+            </property>
+            <property name="statusTip">
+             <string/>
             </property>
             <property name="text">
              <string/>

@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <login.h>
 #include <signup.h>
+#include <QMouseEvent>
+#include <QPoint>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -25,5 +27,9 @@ private:
     Ui::MainWindow *ui;
     Login *login;
     Signup *signup;
+    void mousePressEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
+    int m_nMouseClick_X_Coordinate;
+    int m_nMouseClick_Y_Coordinate;
 };
 #endif // MAINWINDOW_H

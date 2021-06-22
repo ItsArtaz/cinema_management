@@ -37,7 +37,7 @@
 border-image: url(:/image/vivek-doshi-epjI4iHpXqU-unsplash.jpg);
 
 }
-QLabel
+#label_2,#label_3,#label
 {
 color : white;
 }
@@ -167,6 +167,12 @@ border-radius : 8px;
               <height>30</height>
              </size>
             </property>
+            <property name="toolTip">
+             <string>Enter Your Username</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
            </widget>
           </item>
           <item row="3" column="0">
@@ -189,8 +195,14 @@ border-radius : 8px;
               <height>30</height>
              </size>
             </property>
+            <property name="toolTip">
+             <string>Enter Your Password</string>
+            </property>
             <property name="echoMode">
              <enum>QLineEdit::Password</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
            </widget>
           </item>
@@ -387,7 +399,7 @@ border-radius : 8px;
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>55</height>
+           <height>79</height>
           </size>
          </property>
         </spacer>
@@ -403,7 +415,7 @@ border-radius : 8px;
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>75</height>
+           <height>80</height>
           </size>
          </property>
         </spacer>
@@ -550,6 +562,17 @@ border-radius : 8px;
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
     <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
    </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
