@@ -1,37 +1,31 @@
-#ifndef SIGNUP_H
-#define SIGNUP_H
+#ifndef ADMIN_PANEL_H
+#define ADMIN_PANEL_H
 
 #include <QMainWindow>
 #include <QMouseEvent>
 #include <QPoint>
+#include <QString>
 #include "QTimeEdit"
 #include "QLabel"
-#include "QString"
 #include "QDateEdit"
-#include "QMessageBox"
-#include "iterator"
-#include "QFile"
-#include "QTextStream"
 #include "user.h"
 namespace Ui {
-class Signup;
+class Admin_panel;
 }
 
-class Signup : public QMainWindow
+class Admin_panel : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit Signup(QWidget *parent = nullptr,QMainWindow *mw=nullptr);
-    ~Signup();
+    explicit Admin_panel(QWidget *parent = nullptr,QMainWindow *mw=nullptr);
+    ~Admin_panel();
 
 private slots:
-    void on_pb4_clicked();
-
-    void on_pb3_clicked();
+    void on_exit_btn_clicked();
 
 private:
-    Ui::Signup *ui;
+    Ui::Admin_panel *ui;
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     int m_nMouseClick_X_Coordinate;
@@ -39,4 +33,4 @@ private:
     QMainWindow *mw;
 };
 
-#endif // SIGNUP_H
+#endif // ADMIN_PANEL_H

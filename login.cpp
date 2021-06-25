@@ -34,3 +34,58 @@ void Login::on_back_btn_clicked()
     mw->show();
 }
 
+
+void Login::on_continue_btn_clicked()
+{
+    bool found = false;
+    user person ;
+    admin_panel = new Admin_panel(0,this->mw);
+    person.username=this->ui->lineEdit->text();
+    person.password=this->ui->lineEdit_2->text();
+    person.username=person.username.toLower();
+    if (person.username=="admin")
+    {
+        if (person.password=="12345")
+        {
+            this->close();
+            admin_panel->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+            this->admin_panel->show();
+        }
+        else
+        {
+            this->ui->label_4->setText("Your password is wrong !!");
+        }
+    }
+    else
+    {
+        QFile user_pass_file("username_pass.txt");
+        user_pass_file.open(QFile :: Text | QFile :: ReadOnly);
+        QTextStream user_pass_txtstream(&user_pass_file);
+        QStringList  user_pass_stringlist;
+        while (!user_pass_file.atEnd())
+        {
+            user_pass_stringlist = user_pass_txtstream.readLine().split(",");
+            if (person.username==user_pass_stringlist[0])
+            {
+                if (person.password==user_pass_stringlist[1])
+                {
+                    found = true;
+                }
+                break;
+            }
+            else
+            {
+                found = false;
+            }
+        }
+        user_pass_file.close();
+        if (found == true)
+        {
+        }
+        else
+        {
+            this->ui->label_4->setText("Your username or password is wrong!!");
+        }
+    }
+}
+

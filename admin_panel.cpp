@@ -1,9 +1,9 @@
-#include "login.h"
-#include "ui_login.h"
+#include "admin_panel.h"
+#include "ui_admin_panel.h"
 
-Login::Login(QWidget *parent, QMainWindow *mw) :
+Admin_panel::Admin_panel(QWidget *parent,QMainWindow *mw) :
     QMainWindow(parent),
-    ui(new Ui::Login)
+    ui(new Ui::Admin_panel)
 {
     ui->setupUi(this);
     QString date = QDate :: currentDate().toString();
@@ -14,32 +14,24 @@ Login::Login(QWidget *parent, QMainWindow *mw) :
     ui->statusbar->addWidget(timel);
     this->mw=mw;
 }
-
-Login::~Login()
-{
-    delete ui;
-}
-void Login::mousePressEvent(QMouseEvent *event) {
+void Admin_panel::mousePressEvent(QMouseEvent *event) {
     m_nMouseClick_X_Coordinate = event->x();
     m_nMouseClick_Y_Coordinate = event->y();
 }
 
-void Login::mouseMoveEvent(QMouseEvent *event) {
+void Admin_panel::mouseMoveEvent(QMouseEvent *event) {
     move(event->globalX()-m_nMouseClick_X_Coordinate,event->globalY()-m_nMouseClick_Y_Coordinate);
 }
 
-void Login::on_back_btn_clicked()
+Admin_panel::~Admin_panel()
 {
-    this->close();
-    mw->show();
+    delete ui;
 }
 
-
-void Login::on_continue_btn_clicked()
+void Admin_panel::on_exit_btn_clicked()
 {
-    bool found = false;
-    user person ;
-    person.username=this->ui->lineEdit->text();
-    person.password
+    this->close();
+    mw->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    mw->show();
 }
 

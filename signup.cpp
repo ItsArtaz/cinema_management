@@ -40,6 +40,7 @@ void Signup::on_pb3_clicked()
     user person;
     person.username=this->ui->le1->text();
     person.password=this->ui->le2->text();
+    person.username= person.username.toLower();
     bool username_exist = false;
     QFile user_pass_file("username_pass.txt");
     user_pass_file.open(QFile :: Text | QFile :: ReadWrite);
@@ -62,7 +63,7 @@ void Signup::on_pb3_clicked()
     {
         user_pass_txtstream <<person.username<<","<<person.password;
         user_pass_file.close();
-        QMessageBox ::information(this,"Register","Your Account Created !");
+        QMessageBox ::information(this,"Register","Your Account Created !!");
         this->close();
         this->mw->show();
     }
