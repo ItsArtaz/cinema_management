@@ -4,6 +4,10 @@
 #include "QLabel"
 #include "QString"
 #include "QDateEdit"
+#include "QMessageBox"
+#include "iterator"
+#include "QFile"
+#include "QTextStream"
 Signup::Signup(QWidget *parent,QMainWindow *mw) :
     QMainWindow(parent),
     ui(new Ui::Signup)
@@ -33,8 +37,44 @@ void Signup::mouseMoveEvent(QMouseEvent *event) {
 
 void Signup::on_pb4_clicked()
 {
-    this->hide();
+    this->close();
     mw->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     mw->show();
+}
+
+
+void Signup::on_pb3_clicked()
+{
+    bool username_exist = false;
+    QFile user_pass_file("username_pass.txt");
+    user_pass_file.open(QFile :: Text | QFile :: ReadWrite);
+    QTextStream user_pass_txtstream(&user_pass_file);
+    QStringList  user_pass_stringlist;
+    while (!user_pass_file.atEnd())
+    {
+        user_pass_stringlist = user_pass_txtstream.readLine().split(",");
+        if (this->ui->le1->text()==user_pass_stringlist[0])
+        {
+            username_exist=true;
+            break;
+        }
+        else
+        {
+            username_exist=false;
+        }
+    }
+    if (username_exist==false)
+    {
+        user_pass_txtstream <<this->ui->le1->text()<<","<<this->ui->le2->text();
+        user_pass_file.close();
+        QMessageBox ::information(this,"Register","Your Account Created !");
+        this->close();
+        this->mw->show();
+    }
+    else
+    {
+        this->ui->l4->setText("This Username Already Exist !!");
+        user_pass_file.close();
+    }
 }
 

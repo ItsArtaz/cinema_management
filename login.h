@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QMouseEvent>
 #include <QPoint>
+#include <QSet>
+#include <QString>
 namespace Ui {
 class Login;
 }

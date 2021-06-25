@@ -36,7 +36,7 @@
 {
 	border-image: url(:/image/javier-esteban-hAlFVYJ1BWw-unsplash.jpg);
 }
-#l1,#l2,#l3,QCheckBox
+#l1,#l2,#l3,QCheckBox,#l4
 {
 color : white;
 }
@@ -229,17 +229,33 @@ border-radius : 8px;
           <property name="horizontalSpacing">
            <number>6</number>
           </property>
-          <item row="0" column="0">
-           <widget class="QLabel" name="l1">
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="le1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>235</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>235</width>
+              <height>30</height>
+             </size>
+            </property>
             <property name="font">
              <font>
-              <pointsize>15</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
+              <pointsize>16</pointsize>
              </font>
             </property>
-            <property name="text">
-             <string>USERNAME :</string>
+            <property name="statusTip">
+             <string>Enter Your Username</string>
             </property>
            </widget>
           </item>
@@ -278,6 +294,18 @@ border-radius : 8px;
             </property>
            </widget>
           </item>
+          <item row="6" column="0">
+           <widget class="QCheckBox" name="cb1">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>I Agree The Terms </string>
+            </property>
+           </widget>
+          </item>
           <item row="2" column="0">
            <widget class="QLabel" name="l2">
             <property name="font">
@@ -292,45 +320,29 @@ border-radius : 8px;
             </property>
            </widget>
           </item>
-          <item row="6" column="0">
-           <widget class="QCheckBox" name="cb1">
+          <item row="0" column="0">
+           <widget class="QLabel" name="l1">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>USERNAME :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="l4">
             <property name="font">
              <font>
               <pointsize>12</pointsize>
              </font>
             </property>
             <property name="text">
-             <string>I Agree The Terms </string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLineEdit" name="le1">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>235</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>235</width>
-              <height>30</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>16</pointsize>
-             </font>
-            </property>
-            <property name="statusTip">
-             <string>Enter Your Username</string>
+             <string/>
             </property>
            </widget>
           </item>

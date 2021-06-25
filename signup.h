@@ -19,6 +19,8 @@ public:
 private slots:
     void on_pb4_clicked();
 
+    void on_pb3_clicked();
+
 private:
     Ui::Signup *ui;
     void mousePressEvent(QMouseEvent *event);
@@ -26,7 +28,6 @@ private:
     int m_nMouseClick_X_Coordinate;
     int m_nMouseClick_Y_Coordinate;
     QMainWindow *mw;
-
 };
 
 #endif // SIGNUP_H
