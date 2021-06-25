@@ -4,6 +4,15 @@
 #include <QMainWindow>
 #include <QMouseEvent>
 #include <QPoint>
+#include "QTimeEdit"
+#include "QLabel"
+#include "QString"
+#include "QDateEdit"
+#include "QMessageBox"
+#include "iterator"
+#include "QFile"
+#include "QTextStream"
+#include "user.h"
 namespace Ui {
 class Signup;
 }

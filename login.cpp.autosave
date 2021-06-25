@@ -34,3 +34,12 @@ void Login::on_back_btn_clicked()
     mw->show();
 }
 
+
+void Login::on_continue_btn_clicked()
+{
+    bool found = false;
+    user person ;
+    person.username=this->ui->lineEdit->text();
+    person.password
+}
+

@@ -37,7 +37,7 @@
 border-image: url(:/image/vivek-doshi-epjI4iHpXqU-unsplash.jpg);
 
 }
-#label_2,#label_3,#label
+#label_2,#label_3,#label,#label_4
 {
 color : white;
 }
@@ -147,6 +147,24 @@ border-radius : 8px;
             </property>
            </widget>
           </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>13</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>PASSWORD :</string>
+            </property>
+           </widget>
+          </item>
           <item row="1" column="0">
            <widget class="QLineEdit" name="lineEdit">
             <property name="sizePolicy">
@@ -206,21 +224,21 @@ border-radius : 8px;
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_3">
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_4">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
             <property name="font">
              <font>
-              <pointsize>13</pointsize>
+              <pointsize>12</pointsize>
              </font>
             </property>
             <property name="text">
-             <string>PASSWORD :</string>
+             <string/>
             </property>
            </widget>
           </item>
@@ -444,8 +462,7 @@ border-radius : 8px;
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">
-</string>
+       <string notr="true"/>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <property name="spacing">
@@ -505,6 +522,9 @@ border-radius : 8px;
        </item>
        <item>
         <widget class="QPushButton" name="continue_btn">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -593,8 +613,8 @@ border-radius : 8px;
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>738</x>
-     <y>78</y>
+     <x>796</x>
+     <y>118</y>
     </hint>
     <hint type="destinationlabel">
      <x>794</x>

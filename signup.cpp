@@ -1,13 +1,5 @@
 #include "signup.h"
 #include "ui_signup.h"
-#include "QTimeEdit"
-#include "QLabel"
-#include "QString"
-#include "QDateEdit"
-#include "QMessageBox"
-#include "iterator"
-#include "QFile"
-#include "QTextStream"
 Signup::Signup(QWidget *parent,QMainWindow *mw) :
     QMainWindow(parent),
     ui(new Ui::Signup)
@@ -45,6 +37,9 @@ void Signup::on_pb4_clicked()
 
 void Signup::on_pb3_clicked()
 {
+    user person;
+    person.username=this->ui->le1->text();
+    person.password=this->ui->le2->text();
     bool username_exist = false;
     QFile user_pass_file("username_pass.txt");
     user_pass_file.open(QFile :: Text | QFile :: ReadWrite);
@@ -53,7 +48,7 @@ void Signup::on_pb3_clicked()
     while (!user_pass_file.atEnd())
     {
         user_pass_stringlist = user_pass_txtstream.readLine().split(",");
-        if (this->ui->le1->text()==user_pass_stringlist[0])
+        if (person.username==user_pass_stringlist[0])
         {
             username_exist=true;
             break;
@@ -63,15 +58,15 @@ void Signup::on_pb3_clicked()
             username_exist=false;
         }
     }
-    if (username_exist==false)
+    if (username_exist==false && person.username !="" && person.password != "\0")
     {
-        user_pass_txtstream <<this->ui->le1->text()<<","<<this->ui->le2->text();
+        user_pass_txtstream <<person.username<<","<<person.password;
         user_pass_file.close();
         QMessageBox ::information(this,"Register","Your Account Created !");
         this->close();
         this->mw->show();
     }
-    else
+    else if (username_exist==true)
     {
         this->ui->l4->setText("This Username Already Exist !!");
         user_pass_file.close();

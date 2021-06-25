@@ -6,6 +6,11 @@
 #include <QPoint>
 #include <QSet>
 #include <QString>
+#include "QTimeEdit"
+#include "QLabel"
+#include "QDateEdit"
+#include "user.h"
+
 namespace Ui {
 class Login;
 }

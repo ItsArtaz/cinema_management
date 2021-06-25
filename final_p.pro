@@ -12,12 +12,14 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    signup.cpp
+    signup.cpp \
+    user.cpp
 
 HEADERS += \
     login.h \
     mainwindow.h \
-    signup.h
+    signup.h \
+    user.h
 
 FORMS += \
     login.ui \
