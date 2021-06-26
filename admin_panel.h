@@ -9,6 +9,7 @@
 #include "QLabel"
 #include "QDateEdit"
 #include "user.h"
+#include "add_movie.h"
 namespace Ui {
 class Admin_panel;
 }
@@ -24,6 +25,8 @@ public:
 private slots:
     void on_exit_btn_clicked();
 
+    void on_add_btn_clicked();
+
 private:
     Ui::Admin_panel *ui;
     void mousePressEvent(QMouseEvent *event);
@@ -31,6 +34,7 @@ private:
     int m_nMouseClick_X_Coordinate;
     int m_nMouseClick_Y_Coordinate;
     QMainWindow *mw;
+    Add_movie *add_movie;
 };
 
 #endif // ADMIN_PANEL_H

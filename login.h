@@ -3,14 +3,17 @@
 
 #include <QMainWindow>
 #include <admin_panel.h>
+#include <menu.h>
+#include <QMainWindow>
 #include <QMouseEvent>
 #include <QPoint>
+#include <user.h>
 #include <QString>
+#include <QFile>
+#include <QTextStream>
 #include "QTimeEdit"
 #include "QLabel"
 #include "QDateEdit"
-#include "user.h"
-
 namespace Ui {
 class Login;
 }
@@ -31,6 +34,7 @@ private slots:
 private:
     Ui::Login *ui;
     Admin_panel *admin_panel;
+    Menu *menu;
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     int m_nMouseClick_X_Coordinate;

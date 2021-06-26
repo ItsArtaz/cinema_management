@@ -40,6 +40,7 @@ void Login::on_continue_btn_clicked()
     bool found = false;
     user person ;
     admin_panel = new Admin_panel(0,this->mw);
+    menu = new Menu(0,this->mw);
     person.username=this->ui->lineEdit->text();
     person.password=this->ui->lineEdit_2->text();
     person.username=person.username.toLower();
@@ -49,7 +50,7 @@ void Login::on_continue_btn_clicked()
         {
             this->close();
             admin_panel->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-            this->admin_panel->show();
+            admin_panel->show();
         }
         else
         {
@@ -62,7 +63,7 @@ void Login::on_continue_btn_clicked()
         user_pass_file.open(QFile :: Text | QFile :: ReadOnly);
         QTextStream user_pass_txtstream(&user_pass_file);
         QStringList  user_pass_stringlist;
-        while (!user_pass_file.atEnd())
+        while (!user_pass_txtstream.atEnd())
         {
             user_pass_stringlist = user_pass_txtstream.readLine().split(",");
             if (person.username==user_pass_stringlist[0])
@@ -81,6 +82,12 @@ void Login::on_continue_btn_clicked()
         user_pass_file.close();
         if (found == true)
         {
+            this->ui->lineEdit->setText("");
+            this->ui->lineEdit_2->setText("");
+            this->ui->label_4->setText("");
+            this->close();
+            menu->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+            menu->show();
         }
         else
         {

@@ -46,9 +46,9 @@ void Signup::on_pb3_clicked()
     user_pass_file.open(QFile :: Text | QFile :: ReadWrite);
     QTextStream user_pass_txtstream(&user_pass_file);
     QStringList  user_pass_stringlist;
-    while (!user_pass_file.atEnd())
+    while (!user_pass_txtstream.atEnd())
     {
-        user_pass_stringlist = user_pass_txtstream.readLine().split(",");
+        user_pass_stringlist = user_pass_txtstream.readLine().split(',');
         if (person.username==user_pass_stringlist[0])
         {
             username_exist=true;
@@ -58,12 +58,17 @@ void Signup::on_pb3_clicked()
         {
             username_exist=false;
         }
+        user_pass_stringlist={""};
     }
-    if (username_exist==false && person.username !="" && person.password != "\0")
+    if (username_exist==false && person.username !="" && person.password != "")
     {
-        user_pass_txtstream <<person.username<<","<<person.password;
+        user_pass_txtstream <<person.username<<","<<person.password<<"\n";
         user_pass_file.close();
         QMessageBox ::information(this,"Register","Your Account Created !!");
+        this->ui->le1->setText("");
+        this->ui->le2->setText("");
+        this->ui->l4->setText("");
+        this->ui->cb1->setChecked(false);
         this->close();
         this->mw->show();
     }

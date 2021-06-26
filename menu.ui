@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Admin_panel</class>
- <widget class="QMainWindow" name="Admin_panel">
+ <class>Menu</class>
+ <widget class="QMainWindow" name="Menu">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>813</width>
-    <height>639</height>
+    <height>620</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -25,13 +25,8 @@
   <property name="maximumSize">
    <size>
     <width>813</width>
-    <height>664</height>
+    <height>644</height>
    </size>
-  </property>
-  <property name="font">
-   <font>
-    <pointsize>47</pointsize>
-   </font>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -39,19 +34,16 @@
   <property name="styleSheet">
    <string notr="true">#centralwidget
 {
-	border-image: url(:/images/vivek-doshi-CENG0_brmBw-unsplash.jpg);
-
+border-image: url(:/images/vivek-doshi-CENG0_brmBw-unsplash.jpg);
 }
 #l1
 {
- color : white;
+color : white
 }
-
 #vg1
 {
 	background-color: rgba(121, 25, 26,0.4);
 }
-
 QPushButton
 {
 color : white;
@@ -70,31 +62,28 @@ border-radius : 8px;
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
    <property name="minimumSize">
     <size>
-     <width>813</width>
-     <height>620</height>
+     <width>822</width>
+     <height>600</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
-     <width>813</width>
-     <height>620</height>
+     <width>822</width>
+     <height>600</height>
     </size>
    </property>
-   <layout class="QGridLayout" name="gridLayout_2">
-    <item row="0" column="0">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
      <widget class="QWidget" name="gw1" native="true">
       <layout class="QGridLayout" name="gridLayout">
        <property name="leftMargin">
-        <number>20</number>
-       </property>
-       <property name="bottomMargin">
         <number>1</number>
        </property>
        <item row="0" column="1">
@@ -106,19 +95,6 @@ border-radius : 8px;
           <size>
            <width>40</width>
            <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="2" column="3">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
           </size>
          </property>
         </spacer>
@@ -137,6 +113,12 @@ border-radius : 8px;
            <height>70</height>
           </size>
          </property>
+         <property name="maximumSize">
+          <size>
+           <width>137</width>
+           <height>70</height>
+          </size>
+         </property>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
            <widget class="QPushButton" name="minimize_btn">
@@ -147,6 +129,12 @@ border-radius : 8px;
              </sizepolicy>
             </property>
             <property name="minimumSize">
+             <size>
+              <width>56</width>
+              <height>56</height>
+             </size>
+            </property>
+            <property name="maximumSize">
              <size>
               <width>56</width>
               <height>56</height>
@@ -181,6 +169,12 @@ border-radius : 8px;
               <height>56</height>
              </size>
             </property>
+            <property name="maximumSize">
+             <size>
+              <width>56</width>
+              <height>56</height>
+             </size>
+            </property>
             <property name="text">
              <string/>
             </property>
@@ -199,6 +193,22 @@ border-radius : 8px;
          </layout>
         </widget>
        </item>
+       <item row="2" column="0">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>167</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
        <item row="2" column="2">
         <spacer name="horizontalSpacer_3">
          <property name="orientation">
@@ -208,6 +218,56 @@ border-radius : 8px;
           <size>
            <width>40</width>
            <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="3">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="l1">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>44</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>21</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Menu</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
           </size>
          </property>
         </spacer>
@@ -222,13 +282,13 @@ border-radius : 8px;
          </property>
          <property name="minimumSize">
           <size>
-           <width>504</width>
-           <height>454</height>
+           <width>437</width>
+           <height>410</height>
           </size>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
           <item alignment="Qt::AlignHCenter">
-           <widget class="QPushButton" name="add_btn">
+           <widget class="QPushButton" name="book_btn">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
               <horstretch>0</horstretch>
@@ -241,25 +301,7 @@ border-radius : 8px;
               <height>54</height>
              </size>
             </property>
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Add a new Movie</string>
-            </property>
-           </widget>
-          </item>
-          <item alignment="Qt::AlignHCenter">
-           <widget class="QPushButton" name="delete_btn">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
+            <property name="maximumSize">
              <size>
               <width>403</width>
               <height>54</height>
@@ -271,31 +313,7 @@ border-radius : 8px;
              </font>
             </property>
             <property name="text">
-             <string>Delete a Movie</string>
-            </property>
-           </widget>
-          </item>
-          <item alignment="Qt::AlignHCenter">
-           <widget class="QPushButton" name="edit_btn">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>403</width>
-              <height>54</height>
-             </size>
-            </property>
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Edit a Movie</string>
+             <string>Book a Movie</string>
             </property>
            </widget>
           </item>
@@ -313,6 +331,12 @@ border-radius : 8px;
               <height>54</height>
              </size>
             </property>
+            <property name="maximumSize">
+             <size>
+              <width>403</width>
+              <height>54</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <pointsize>15</pointsize>
@@ -320,6 +344,36 @@ border-radius : 8px;
             </property>
             <property name="text">
              <string>Archive</string>
+            </property>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>403</width>
+              <height>54</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>403</width>
+              <height>54</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Search</string>
             </property>
            </widget>
           </item>
@@ -332,6 +386,12 @@ border-radius : 8px;
              </sizepolicy>
             </property>
             <property name="minimumSize">
+             <size>
+              <width>403</width>
+              <height>54</height>
+             </size>
+            </property>
+            <property name="maximumSize">
              <size>
               <width>403</width>
               <height>54</height>
@@ -350,51 +410,10 @@ border-radius : 8px;
          </layout>
         </widget>
        </item>
-       <item row="2" column="0">
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>102</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="1">
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="l1">
-         <property name="font">
-          <font>
-           <pointsize>14</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Admin panel</string>
-         </property>
-        </widget>
-       </item>
       </layout>
      </widget>
     </item>
-    <item row="1" column="0">
+    <item>
      <spacer name="verticalSpacer_3">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -405,7 +424,7 @@ border-radius : 8px;
       <property name="sizeHint" stdset="0">
        <size>
         <width>20</width>
-        <height>40</height>
+        <height>74</height>
        </size>
       </property>
      </spacer>
@@ -422,26 +441,7 @@ border-radius : 8px;
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar">
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>16777215</width>
-     <height>52</height>
-    </size>
-   </property>
-  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
   <include location="Photos.qrc"/>
@@ -450,32 +450,32 @@ border-radius : 8px;
   <connection>
    <sender>close_btn</sender>
    <signal>clicked()</signal>
-   <receiver>Admin_panel</receiver>
+   <receiver>Menu</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>771</x>
-     <y>50</y>
+     <y>51</y>
     </hint>
     <hint type="destinationlabel">
-     <x>808</x>
-     <y>123</y>
+     <x>810</x>
+     <y>29</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>minimize_btn</sender>
    <signal>clicked()</signal>
-   <receiver>Admin_panel</receiver>
+   <receiver>Menu</receiver>
    <slot>showMinimized()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>717</x>
-     <y>49</y>
+     <x>710</x>
+     <y>69</y>
     </hint>
     <hint type="destinationlabel">
-     <x>809</x>
-     <y>183</y>
+     <x>814</x>
+     <y>80</y>
     </hint>
    </hints>
   </connection>

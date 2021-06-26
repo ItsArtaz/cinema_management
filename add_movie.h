@@ -1,41 +1,37 @@
-#ifndef SIGNUP_H
-#define SIGNUP_H
+#ifndef ADD_MOVIE_H
+#define ADD_MOVIE_H
 
 #include <QMainWindow>
 #include <QMouseEvent>
 #include <QPoint>
-#include <user.h>
 #include <QString>
-#include <QFile>
-#include <QTextStream>
 #include "QTimeEdit"
 #include "QLabel"
 #include "QDateEdit"
-#include "QMessageBox"
+#include "movie.h"
 namespace Ui {
-class Signup;
+class Add_movie;
 }
 
-class Signup : public QMainWindow
+class Add_movie : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit Signup(QWidget *parent = nullptr,QMainWindow *mw=nullptr);
-    ~Signup();
+    explicit Add_movie(QWidget *parent = nullptr,QMainWindow *panel=nullptr);
+    ~Add_movie();
 
 private slots:
-    void on_pb4_clicked();
-
-    void on_pb3_clicked();
+    void on_save_btn_clicked();
 
 private:
-    Ui::Signup *ui;
+    Ui::Add_movie *ui;
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     int m_nMouseClick_X_Coordinate;
     int m_nMouseClick_Y_Coordinate;
-    QMainWindow *mw;
+    QMainWindow *panel;
+
 };
 
-#endif // SIGNUP_H
+#endif // ADD_MOVIE_H

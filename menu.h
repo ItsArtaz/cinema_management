@@ -1,36 +1,32 @@
-#ifndef SIGNUP_H
-#define SIGNUP_H
+#ifndef MENU_H
+#define MENU_H
 
 #include <QMainWindow>
 #include <QMouseEvent>
 #include <QPoint>
-#include <user.h>
 #include <QString>
-#include <QFile>
-#include <QTextStream>
 #include "QTimeEdit"
 #include "QLabel"
 #include "QDateEdit"
-#include "QMessageBox"
+#include "user.h"
+
 namespace Ui {
-class Signup;
+class Menu;
 }
 
-class Signup : public QMainWindow
+class Menu : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit Signup(QWidget *parent = nullptr,QMainWindow *mw=nullptr);
-    ~Signup();
+    explicit Menu(QWidget *parent = nullptr,QMainWindow *mw=nullptr);
+    ~Menu();
 
 private slots:
-    void on_pb4_clicked();
-
-    void on_pb3_clicked();
+    void on_exit_btn_clicked();
 
 private:
-    Ui::Signup *ui;
+    Ui::Menu *ui;
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     int m_nMouseClick_X_Coordinate;
@@ -38,4 +34,4 @@ private:
     QMainWindow *mw;
 };
 
-#endif // SIGNUP_H
+#endif // MENU_H
