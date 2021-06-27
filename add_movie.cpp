@@ -43,17 +43,27 @@ void Add_movie::on_save_btn_clicked()
     info.director=info.director.toLower();
     info.capacity=this->ui->capacity_le->text();
     info.suggested=this->ui->checkBox->isChecked();
+    info.group=this->ui->group_le->text();
+    info.group=info.group.toLower();
     QFile movie_file("movies.txt");
     movie_file.open(QFile :: Text | QFile ::Append);
     QTextStream movie_txtstream(&movie_file);
     movie_txtstream <<info.name<<','<<info.genre<<','<<info.director<<','<<info.released<<','<<info.actor<<','<<info.capacity;
     if (info.suggested==true)
     {
-        movie_txtstream <<','<<"recommended"<<"\n";
+        movie_txtstream <<','<<"recommended";
     }
     else
     {
-        movie_txtstream <<','<<"no recommended"<<"\n";
+        movie_txtstream <<','<<"no recommended";
+    }
+    if (info.group != "")
+    {
+        movie_txtstream <<',' <<info.group<<'\n';
+    }
+    else
+    {
+        movie_txtstream <<','<<'\n';
     }
     movie_file.close();
     QMessageBox ::information(this,"Saved","Movie added !!");

@@ -12,6 +12,7 @@ Menu::Menu(QWidget *parent,QMainWindow *mw) :
     QString time = QTime :: currentTime().toString();
     QLabel *timel=new QLabel(time);
     ui->statusbar->addWidget(timel);
+    archive = new Archive(0,this);
     this->mw=mw;
 }
 void Menu::mousePressEvent(QMouseEvent *event) {
@@ -33,5 +34,13 @@ void Menu::on_exit_btn_clicked()
     this->close();
     mw->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     mw->show();
+}
+
+
+void Menu::on_archive_btn_clicked()
+{
+    this->close();
+    archive->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    archive->show();
 }
 

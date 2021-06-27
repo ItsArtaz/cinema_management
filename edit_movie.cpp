@@ -42,6 +42,8 @@ void Edit_movie::on_edit_btn_clicked()
     newinfo.actor=newinfo.actor.toLower();
     newinfo.director=this->ui->newdirect_le->text();
     newinfo.director=newinfo.director.toLower();
+    newinfo.group=this->ui->newgp_le->text();
+    newinfo.group=newinfo.group.toLower();
     newinfo.capacity=this->ui->newcapa_le->text();
     newinfo.suggested=this->ui->checkBox->isChecked();
     movie oldinfo;
@@ -55,6 +57,8 @@ void Edit_movie::on_edit_btn_clicked()
     oldinfo.actor=oldinfo.actor.toLower();
     oldinfo.director=this->ui->olddirect_le->text();
     oldinfo.director=oldinfo.director.toLower();
+    oldinfo.group=this->ui->oldgp_le->text();
+    oldinfo.group=oldinfo.group.toLower();
     oldinfo.capacity=this->ui->oldcapa_le->text();
     QFile movie_file("movies.txt");
     QFile tmp_file("tmp.txt");
@@ -114,12 +118,20 @@ void Edit_movie::on_edit_btn_clicked()
             tmp_txtstream <<newinfo.name<<','<<newinfo.genre<<','<<newinfo.director<<','<<newinfo.released<<','<<newinfo.actor<<','<<newinfo.capacity;
             if (newinfo.suggested==true)
             {
-                tmp_txtstream <<','<<"recommended"<<'\n';
+                tmp_txtstream <<','<<"recommended";
             }
             else
             {
-                tmp_txtstream <<','<<"no recommended"<<'\n';
+                tmp_txtstream <<','<<"no recommended";
             }
+        }
+        if(newinfo.group != "")
+        {
+            tmp_txtstream <<','<<newinfo.group<<'\n';
+        }
+        else
+        {
+            tmp_txtstream <<','<<'\n';
         }
     }
     tmp_file.close();

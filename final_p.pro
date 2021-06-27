@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     add_movie.cpp \
     admin_panel.cpp \
+    archive.cpp \
     delete_movie.cpp \
     edit_movie.cpp \
     login.cpp \
@@ -24,6 +25,7 @@ SOURCES += \
 HEADERS += \
     add_movie.h \
     admin_panel.h \
+    archive.h \
     delete_movie.h \
     edit_movie.h \
     login.h \
@@ -36,6 +38,7 @@ HEADERS += \
 FORMS += \
     add_movie.ui \
     admin_panel.ui \
+    archive.ui \
     delete_movie.ui \
     edit_movie.ui \
     login.ui \

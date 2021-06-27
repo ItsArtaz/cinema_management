@@ -12,6 +12,7 @@ public:
     QString released;
     QString director;
     QString capacity;
+    QString group;
     bool suggested;
 };
 
