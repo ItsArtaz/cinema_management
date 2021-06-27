@@ -11,6 +11,7 @@
 #include "user.h"
 #include "add_movie.h"
 #include "delete_movie.h"
+#include "edit_movie.h"
 namespace Ui {
 class Admin_panel;
 }
@@ -30,6 +31,8 @@ private slots:
 
     void on_delete_btn_clicked();
 
+    void on_edit_btn_clicked();
+
 private:
     Ui::Admin_panel *ui;
     void mousePressEvent(QMouseEvent *event);
@@ -39,6 +42,7 @@ private:
     QMainWindow *mw;
     Add_movie *add_movie;
     delete_movie *del_movie;
+    Edit_movie *edit_movie;
 };
 
 #endif // ADMIN_PANEL_H

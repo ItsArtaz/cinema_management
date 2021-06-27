@@ -91,10 +91,16 @@ border-radius : 8px;
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <property name="leftMargin">
-        <number>9</number>
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>1</number>
        </property>
        <property name="bottomMargin">
-        <number>9</number>
+        <number>1</number>
        </property>
        <item row="4" column="1">
         <spacer name="verticalSpacer_3">
@@ -234,6 +240,9 @@ border-radius : 8px;
          <property name="font">
           <font>
            <pointsize>17</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <underline>true</underline>
           </font>
          </property>
          <property name="text">
@@ -295,7 +304,7 @@ border-radius : 8px;
             </property>
             <property name="minimumSize">
              <size>
-              <width>95</width>
+              <width>102</width>
               <height>30</height>
              </size>
             </property>
@@ -328,7 +337,7 @@ border-radius : 8px;
             </property>
             <property name="minimumSize">
              <size>
-              <width>95</width>
+              <width>102</width>
               <height>30</height>
              </size>
             </property>
@@ -361,7 +370,7 @@ border-radius : 8px;
             </property>
             <property name="minimumSize">
              <size>
-              <width>95</width>
+              <width>102</width>
               <height>30</height>
              </size>
             </property>
@@ -398,10 +407,19 @@ border-radius : 8px;
               <height>0</height>
              </size>
             </property>
+            <property name="placeholderText">
+             <string>Enter capacity of room for this Movie</string>
+            </property>
            </widget>
           </item>
           <item row="5" column="0">
            <widget class="QLabel" name="l7">
+            <property name="minimumSize">
+             <size>
+              <width>102</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="font">
              <font>
               <pointsize>12</pointsize>
@@ -425,7 +443,7 @@ border-radius : 8px;
             </property>
             <property name="minimumSize">
              <size>
-              <width>95</width>
+              <width>102</width>
               <height>30</height>
              </size>
             </property>
@@ -467,6 +485,9 @@ border-radius : 8px;
               <pointsize>12</pointsize>
              </font>
             </property>
+            <property name="placeholderText">
+             <string>Enter Movie's Name</string>
+            </property>
            </widget>
           </item>
           <item row="3" column="1">
@@ -488,6 +509,9 @@ border-radius : 8px;
               <pointsize>12</pointsize>
              </font>
             </property>
+            <property name="placeholderText">
+             <string>Enter year of release</string>
+            </property>
            </widget>
           </item>
           <item row="4" column="1">
@@ -508,6 +532,9 @@ border-radius : 8px;
              <font>
               <pointsize>12</pointsize>
              </font>
+            </property>
+            <property name="placeholderText">
+             <string>Enter actor's Name(paul,joel)</string>
             </property>
            </widget>
           </item>
@@ -542,7 +569,7 @@ border-radius : 8px;
             </property>
             <property name="minimumSize">
              <size>
-              <width>95</width>
+              <width>102</width>
               <height>30</height>
              </size>
             </property>
@@ -583,6 +610,9 @@ border-radius : 8px;
              <font>
               <pointsize>12</pointsize>
              </font>
+            </property>
+            <property name="placeholderText">
+             <string>Enter Director's Name</string>
             </property>
            </widget>
           </item>
@@ -631,6 +661,9 @@ border-radius : 8px;
              <font>
               <pointsize>12</pointsize>
              </font>
+            </property>
+            <property name="placeholderText">
+             <string>Enter genre's Name (drama,crime)</string>
             </property>
            </widget>
           </item>

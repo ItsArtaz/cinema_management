@@ -31,6 +31,7 @@ void delete_movie::on_pushButton_3_clicked()
 {
     movie info;
     bool writing=false;
+    bool isfound=false;
     info.name=this->ui->name_le->text();
     info.name=info.name.toLower();
     info.genre=this->ui->genre_le->text();
@@ -62,6 +63,7 @@ void delete_movie::on_pushButton_3_clicked()
                         if(movie_stringlist[5]==info.actor || movie_stringlist[6]==info.actor)
                         {
                             writing = false;
+                            isfound = true;
                         }
                         else
                         {
@@ -98,9 +100,17 @@ void delete_movie::on_pushButton_3_clicked()
     movie_file.close();
     remove("movies.txt");
     rename("tmp.txt","movies.txt");
-    QMessageBox ::information(this,"Deleted","Movie Deleted !!");
-    this->close();
-    panel->show();
+    if (isfound==true)
+    {
+        QMessageBox ::information(this,"Deleted","Movie Deleted !!");
+        this->close();
+        panel->show();
+    }
+    else
+    {
+        QMessageBox ::information(this,"Error","Movie not Found !!");
+
+    }
 
 }
 

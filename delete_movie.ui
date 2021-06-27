@@ -85,13 +85,16 @@ border-radius : 8px;
      <widget class="QWidget" name="gridWidget" native="true">
       <layout class="QGridLayout" name="gridLayout">
        <property name="leftMargin">
-        <number>9</number>
+        <number>1</number>
        </property>
        <property name="topMargin">
         <number>1</number>
        </property>
+       <property name="rightMargin">
+        <number>1</number>
+       </property>
        <property name="bottomMargin">
-        <number>9</number>
+        <number>1</number>
        </property>
        <item row="0" column="1">
         <spacer name="horizontalSpacer">
@@ -345,6 +348,12 @@ border-radius : 8px;
               <height>0</height>
              </size>
             </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>Enter year of release</string>
+            </property>
            </widget>
           </item>
           <item row="0" column="1">
@@ -361,6 +370,9 @@ border-radius : 8px;
               <height>0</height>
              </size>
             </property>
+            <property name="placeholderText">
+             <string>Enter Movie's Name</string>
+            </property>
            </widget>
           </item>
           <item row="4" column="1">
@@ -376,6 +388,9 @@ border-radius : 8px;
               <width>265</width>
               <height>0</height>
              </size>
+            </property>
+            <property name="placeholderText">
+             <string>Enter actor's Name(juel)</string>
             </property>
            </widget>
           </item>
@@ -418,6 +433,9 @@ border-radius : 8px;
               <width>265</width>
               <height>0</height>
              </size>
+            </property>
+            <property name="placeholderText">
+             <string>Enter genre(drama)</string>
             </property>
            </widget>
           </item>
@@ -516,6 +534,9 @@ border-radius : 8px;
               <height>0</height>
              </size>
             </property>
+            <property name="placeholderText">
+             <string>Enter Dirctor's Name</string>
+            </property>
            </widget>
           </item>
          </layout>
@@ -528,6 +549,7 @@ border-radius : 8px;
            <pointsize>13</pointsize>
            <weight>75</weight>
            <bold>true</bold>
+           <underline>true</underline>
           </font>
          </property>
          <property name="text">

@@ -14,6 +14,7 @@ Admin_panel::Admin_panel(QWidget *parent,QMainWindow *mw) :
     ui->statusbar->addWidget(timel);
     add_movie = new Add_movie(0,this);
     del_movie = new delete_movie(0,this);
+    edit_movie = new Edit_movie(0,this);
     this->mw=mw;
 }
 void Admin_panel::mousePressEvent(QMouseEvent *event) {
@@ -51,5 +52,13 @@ void Admin_panel::on_delete_btn_clicked()
     this->close();
     del_movie->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     del_movie->show();
+}
+
+
+void Admin_panel::on_edit_btn_clicked()
+{
+    this->close();
+    edit_movie->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    edit_movie->show();
 }
 

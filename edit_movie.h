@@ -1,5 +1,5 @@
-#ifndef DELETE_MOVIE_H
-#define DELETE_MOVIE_H
+#ifndef EDIT_MOVIE_H
+#define EDIT_MOVIE_H
 
 #include <QMainWindow>
 #include <QMouseEvent>
@@ -13,22 +13,22 @@
 #include "QDateEdit"
 #include "movie.h"
 namespace Ui {
-class delete_movie;
+class Edit_movie;
 }
 
-class delete_movie : public QMainWindow
+class Edit_movie : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit delete_movie(QWidget *parent = nullptr,QMainWindow *panel = nullptr);
-    ~delete_movie();
+    explicit Edit_movie(QWidget *parent = nullptr,QMainWindow *panel=nullptr);
+    ~Edit_movie();
 
 private slots:
-    void on_pushButton_3_clicked();
+    void on_edit_btn_clicked();
 
 private:
-    Ui::delete_movie *ui;
+    Ui::Edit_movie *ui;
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     int m_nMouseClick_X_Coordinate;
@@ -36,4 +36,4 @@ private:
     QMainWindow *panel;
 };
 
-#endif // DELETE_MOVIE_H
+#endif // EDIT_MOVIE_H

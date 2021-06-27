@@ -319,7 +319,7 @@ border-radius : 8px;
              </font>
             </property>
             <property name="text">
-             <string>Archive</string>
+             <string>Edit Archive</string>
             </property>
            </widget>
           </item>
@@ -384,6 +384,9 @@ border-radius : 8px;
          <property name="font">
           <font>
            <pointsize>14</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <underline>true</underline>
           </font>
          </property>
          <property name="text">

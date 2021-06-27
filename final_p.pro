@@ -12,6 +12,7 @@ SOURCES += \
     add_movie.cpp \
     admin_panel.cpp \
     delete_movie.cpp \
+    edit_movie.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -24,6 +25,7 @@ HEADERS += \
     add_movie.h \
     admin_panel.h \
     delete_movie.h \
+    edit_movie.h \
     login.h \
     mainwindow.h \
     menu.h \
@@ -35,6 +37,7 @@ FORMS += \
     add_movie.ui \
     admin_panel.ui \
     delete_movie.ui \
+    edit_movie.ui \
     login.ui \
     mainwindow.ui \
     menu.ui \
