@@ -12,6 +12,7 @@ public:
     QString released;
     QString director;
     QString capacity;
+    bool suggested;
 };
 
 #endif // MOVIE_H

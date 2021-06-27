@@ -1,5 +1,5 @@
-#ifndef ADD_MOVIE_H
-#define ADD_MOVIE_H
+#ifndef DELETE_MOVIE_H
+#define DELETE_MOVIE_H
 
 #include <QMainWindow>
 #include <QMouseEvent>
@@ -12,29 +12,30 @@
 #include "QLabel"
 #include "QDateEdit"
 #include "movie.h"
+#include <QVector>
+#include <QPair>
 namespace Ui {
-class Add_movie;
+class delete_movie;
 }
 
-class Add_movie : public QMainWindow
+class delete_movie : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit Add_movie(QWidget *parent = nullptr,QMainWindow *panel=nullptr);
-    ~Add_movie();
+    explicit delete_movie(QWidget *parent = nullptr,QMainWindow *panel = nullptr);
+    ~delete_movie();
 
 private slots:
-    void on_save_btn_clicked();
+    void on_pushButton_3_clicked();
 
 private:
-    Ui::Add_movie *ui;
+    Ui::delete_movie *ui;
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     int m_nMouseClick_X_Coordinate;
     int m_nMouseClick_Y_Coordinate;
     QMainWindow *panel;
-
 };
 
-#endif // ADD_MOVIE_H
+#endif // DELETE_MOVIE_H

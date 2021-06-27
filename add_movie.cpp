@@ -30,6 +30,34 @@ Add_movie::~Add_movie()
 
 void Add_movie::on_save_btn_clicked()
 {
-
+    movie info;
+    info.name=this->ui->name_le->text();
+    info.name=info.name.toLower();
+    info.genre=this->ui->genre_le->text();
+    info.genre=info.genre.toLower();
+    info.released=this->ui->released_le->text();
+    info.released=info.released.toLower();
+    info.actor=this->ui->actor_le->text();
+    info.actor=info.actor.toLower();
+    info.director=this->ui->director_le->text();
+    info.director=info.director.toLower();
+    info.capacity=this->ui->capacity_le->text();
+    info.suggested=this->ui->checkBox->isChecked();
+    QFile movie_file("movies.txt");
+    movie_file.open(QFile :: Text | QFile ::Append);
+    QTextStream movie_txtstream(&movie_file);
+    movie_txtstream <<info.name<<','<<info.genre<<','<<info.director<<','<<info.released<<','<<info.actor<<','<<info.capacity;
+    if (info.suggested==true)
+    {
+        movie_txtstream <<','<<"recommended"<<"\n";
+    }
+    else
+    {
+        movie_txtstream <<','<<"no recommended"<<"\n";
+    }
+    movie_file.close();
+    QMessageBox ::information(this,"Saved","Movie added !!");
+    this->close();
+    this->panel->show();
 }
 
