@@ -30,6 +30,8 @@ void Signup::mouseMoveEvent(QMouseEvent *event) {
 void Signup::on_pb4_clicked()
 {
     this->close();
+    this->ui->le1->clear();
+    this->ui->le2->clear();
     mw->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     mw->show();
 }
@@ -65,8 +67,8 @@ void Signup::on_pb3_clicked()
         user_pass_txtstream <<person.username<<","<<person.password<<"\n";
         user_pass_file.close();
         QMessageBox ::information(this,"Register","Your Account Created !!");
-        this->ui->le1->setText("");
-        this->ui->le2->setText("");
+        this->ui->le1->clear();
+        this->ui->le2->clear();
         this->ui->l4->setText("");
         this->ui->cb1->setChecked(false);
         this->close();
@@ -74,6 +76,9 @@ void Signup::on_pb3_clicked()
     }
     else if (username_exist==true)
     {
+        this->ui->le1->clear();
+        this->ui->le2->clear();
+        this->ui->cb1->setChecked(false);
         this->ui->l4->setText("This Username Already Exist !!");
         user_pass_file.close();
     }

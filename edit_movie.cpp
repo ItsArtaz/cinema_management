@@ -110,8 +110,8 @@ void Edit_movie::on_edit_btn_clicked()
         if (isline == true)
         {
             tmp_txtstream << movie_stringlist[0]<<','<<movie_stringlist[1]<<','<<movie_stringlist[2]<<','<<movie_stringlist[3];
-            tmp_txtstream <<','<<movie_stringlist[4]<<','<<movie_stringlist[5]<<','<<movie_stringlist[6]<<','<<movie_stringlist[7]<<','<<movie_stringlist[8];
-            tmp_txtstream <<'\n';
+            tmp_txtstream <<','<<movie_stringlist[4]<<','<<movie_stringlist[5]<<','<<movie_stringlist[6]<<','<<movie_stringlist[7]<<',';
+            tmp_txtstream <<movie_stringlist[8]<<'\n';
         }
         else
         {
@@ -124,14 +124,14 @@ void Edit_movie::on_edit_btn_clicked()
             {
                 tmp_txtstream <<','<<"no recommended";
             }
-        }
-        if(newinfo.group != "")
-        {
-            tmp_txtstream <<','<<newinfo.group<<'\n';
-        }
-        else
-        {
-            tmp_txtstream <<','<<'\n';
+            if(newinfo.group != "")
+            {
+                tmp_txtstream <<','<<newinfo.group<<'\n';
+            }
+            else
+            {
+                tmp_txtstream <<','<<'\n';
+            }
         }
     }
     tmp_file.close();

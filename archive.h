@@ -31,6 +31,22 @@ private slots:
 
     void on_back_pb_clicked();
 
+    void on_suggested_rb_clicked();
+
+    void on_seeall_rb_clicked();
+
+    void on_genre_rb_clicked();
+
+    void on_name_rb_clicked();
+
+    void on_gp_rb_clicked();
+
+    void on_actor_rb_clicked();
+
+    void on_direct_rb_clicked();
+
+    void on_release_rb_clicked();
+
 private:
     Ui::Archive *ui;
     void mousePressEvent(QMouseEvent *event);

@@ -45,13 +45,14 @@ void Archive::on_seach_le_textChanged(const QString &arg1)
         movie = movie_txtstream.readLine().split(',');
         info.push_back(movie);
     }
+    movie_file.close();
     if(this->ui->name_rb->isChecked() && line !="")
     {
         for (auto ii : info)
         {
             if (ii[0].startsWith(line))
             {
-                ui->listWidget->addItem(QString ::number(i) + "." + ii[0]);
+                ui->listWidget->addItem(QString ::number(i) + ".Name : " + ii[0] + '(' + ii[4] + ')' + '\n' + "Genre : " + ii[1] + ',' + ii[2] +'\n' +"Director : " + ii[3] +'\n'+"Actors : " + ii[5] +',' + ii[6] +'\n'+"Capacity : " + ii[7]);
                 i++;
             }
         }
@@ -63,7 +64,7 @@ void Archive::on_seach_le_textChanged(const QString &arg1)
         {
             if (ii[3].startsWith(line))
             {
-                ui->listWidget->addItem(QString ::number(i) + "." + ii[0]);
+                ui->listWidget->addItem(QString ::number(i) + ".Name : " + ii[0] + '(' + ii[4] + ')' + '\n' + "Genre : " + ii[1] + ',' + ii[2] +'\n' +"Director : " + ii[3] +'\n'+"Actors : " + ii[5] +',' + ii[6] +'\n'+"Capacity : " + ii[7]);
                 i++;
             }
         }
@@ -75,7 +76,7 @@ void Archive::on_seach_le_textChanged(const QString &arg1)
         {
             if (ii[6].startsWith(line) || ii[5].startsWith(line))
             {
-                ui->listWidget->addItem(QString ::number(i) + "." + ii[0]);
+                ui->listWidget->addItem(QString ::number(i) + ".Name : " + ii[0] + '(' + ii[4] + ')' + '\n' + "Genre : " + ii[1] + ',' + ii[2] +'\n' +"Director : " + ii[3] +'\n'+"Actors : " + ii[5] +',' + ii[6] +'\n'+"Capacity : " + ii[7]);
                 i++;
             }
         }
@@ -87,7 +88,7 @@ void Archive::on_seach_le_textChanged(const QString &arg1)
         {
             if (ii[8]=="recommended")
             {
-                ui->listWidget->addItem(QString ::number(i) + "." + ii[0]);
+                ui->listWidget->addItem(QString ::number(i) + ".Name : " + ii[0] + '(' + ii[4] + ')' + '\n' + "Genre : " + ii[1] + ',' + ii[2] +'\n' +"Director : " + ii[3] +'\n'+"Actors : " + ii[5] +',' + ii[6] +'\n'+"Capacity : " + ii[7]);
                 i++;
             }
         }
@@ -99,7 +100,7 @@ void Archive::on_seach_le_textChanged(const QString &arg1)
         {
             if (ii[4].startsWith(line))
             {
-                ui->listWidget->addItem(QString ::number(i) + "." + ii[0]);
+                ui->listWidget->addItem(QString ::number(i) + ".Name : " + ii[0] + '(' + ii[4] + ')' + '\n' + "Genre : " + ii[1] + ',' + ii[2] +'\n' +"Director : " + ii[3] +'\n'+"Actors : " + ii[5] +',' + ii[6] +'\n'+"Capacity : " + ii[7]);
                 i++;
             }
         }
@@ -111,7 +112,7 @@ void Archive::on_seach_le_textChanged(const QString &arg1)
         {
             if (ii[1].startsWith(line) | ii[2].startsWith(line))
             {
-                ui->listWidget->addItem(QString ::number(i) + "." + ii[0]);
+                ui->listWidget->addItem(QString ::number(i) + ".Name : " + ii[0] + '(' + ii[4] + ')' + '\n' + "Genre : " + ii[1] + ',' + ii[2] +'\n' +"Director : " + ii[3] +'\n'+"Actors : " + ii[5] +',' + ii[6] +'\n'+"Capacity : " + ii[7]);
                 i++;
             }
         }
@@ -123,7 +124,7 @@ void Archive::on_seach_le_textChanged(const QString &arg1)
         {
             if (ii[9].startsWith(arg1))
             {
-                ui->listWidget->addItem(QString ::number(i) + "." + ii[0]);
+                ui->listWidget->addItem(QString ::number(i) + ".Name : " + ii[0] + '(' + ii[4] + ')' + '\n' + "Genre : " + ii[1] + ',' + ii[2] +'\n' +"Director : " + ii[3] +'\n'+"Actors : " + ii[5] +',' + ii[6] +'\n'+"Capacity : " + ii[7]);
                 i++;
             }
         }
@@ -133,7 +134,7 @@ void Archive::on_seach_le_textChanged(const QString &arg1)
         for (auto ii : info)
         {
 
-            ui->listWidget->addItem(QString ::number(i) + "." + ii[0]);
+            ui->listWidget->addItem(QString ::number(i) + ".Name : " + ii[0] + '(' + ii[4] + ')' + '\n' + "Genre : " + ii[1] + ',' + ii[2] +'\n' +"Director : " + ii[3] +'\n'+"Actors : " + ii[5] +',' + ii[6] +'\n'+"Capacity : " + ii[7]);
             i++;
         }
     }
@@ -144,5 +145,94 @@ void Archive::on_back_pb_clicked()
     this->ui->seach_le->clear();
     this->close();
     menu->show();
+}
+
+
+void Archive::on_suggested_rb_clicked()
+{
+    int i=1;
+    ui->listWidget->clear();
+    QVector <QStringList> info;
+    QStringList movie;
+    QFile movie_file("movies.txt");
+    movie_file.open(QFile ::Text | QFile ::ReadOnly);
+    QTextStream movie_txtstream(&movie_file);
+    while(!movie_txtstream.atEnd())
+    {
+        movie = movie_txtstream.readLine().split(',');
+        info.push_back(movie);
+    }
+    movie_file.close();
+    i=1;
+    for (auto ii : info)
+    {
+        if (ii[8]=="recommended")
+        {
+            ui->listWidget->addItem(QString ::number(i) + ".Name : " + ii[0] + '(' + ii[4] + ')' + '\n' + "Genre : " + ii[1] + ',' + ii[2] +'\n' +"Director : " + ii[3] +'\n'+"Actors : " + ii[5] +',' + ii[6] +'\n'+"Capacity : " + ii[7]);
+            i++;
+        }
+    }
+}
+
+
+void Archive::on_seeall_rb_clicked()
+{
+    int i=1;
+    ui->listWidget->clear();
+    QVector <QStringList> info;
+    QStringList movie;
+    QFile movie_file("movies.txt");
+    movie_file.open(QFile ::Text | QFile ::ReadOnly);
+    QTextStream movie_txtstream(&movie_file);
+    while(!movie_txtstream.atEnd())
+    {
+        movie = movie_txtstream.readLine().split(',');
+        info.push_back(movie);
+    }
+    movie_file.close();
+    i=1;
+    for (auto ii : info)
+    {
+
+        ui->listWidget->addItem(QString ::number(i) + ".Name : " + ii[0] + '(' + ii[4] + ')' + '\n' + "Genre : " + ii[1] + ',' + ii[2] +'\n' +"Director : " + ii[3] +'\n'+"Actors : " + ii[5] +',' + ii[6] +'\n'+"Capacity : " + ii[7]);
+        i++;
+    }
+
+}
+
+
+void Archive::on_genre_rb_clicked()
+{
+    ui->listWidget->clear();
+}
+
+
+void Archive::on_name_rb_clicked()
+{
+    ui->listWidget->clear();
+}
+
+
+void Archive::on_gp_rb_clicked()
+{
+    ui->listWidget->clear();
+}
+
+
+void Archive::on_actor_rb_clicked()
+{
+    ui->listWidget->clear();
+}
+
+
+void Archive::on_direct_rb_clicked()
+{
+    ui->listWidget->clear();
+}
+
+
+void Archive::on_release_rb_clicked()
+{
+    ui->listWidget->clear();
 }
 

@@ -45,6 +45,9 @@ void Add_movie::on_save_btn_clicked()
     info.suggested=this->ui->checkBox->isChecked();
     info.group=this->ui->group_le->text();
     info.group=info.group.toLower();
+    QFile just_for_create("movies.txt");
+    just_for_create.open(QFile :: Text | QFile ::WriteOnly);
+    just_for_create.close();
     QFile movie_file("movies.txt");
     movie_file.open(QFile :: Text | QFile ::Append);
     QTextStream movie_txtstream(&movie_file);

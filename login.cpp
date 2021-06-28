@@ -30,6 +30,8 @@ void Login::mouseMoveEvent(QMouseEvent *event) {
 
 void Login::on_back_btn_clicked()
 {
+    this->ui->lineEdit->clear();
+    this->ui->lineEdit_2->clear();
     this->close();
     mw->show();
 }
@@ -82,8 +84,8 @@ void Login::on_continue_btn_clicked()
         user_pass_file.close();
         if (found == true)
         {
-            this->ui->lineEdit->setText("");
-            this->ui->lineEdit_2->setText("");
+            this->ui->lineEdit->clear();
+            this->ui->lineEdit_2->clear();
             this->ui->label_4->setText("");
             this->close();
             menu->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
@@ -91,6 +93,8 @@ void Login::on_continue_btn_clicked()
         }
         else
         {
+            this->ui->lineEdit->clear();
+            this->ui->lineEdit_2->clear();
             this->ui->label_4->setText("Your username or password is wrong!!");
         }
     }
