@@ -144,3 +144,51 @@ void Booking::on_pushButton_3_clicked()
     }
 }
 
+
+void Booking::on_seach_le_textChanged(const QString &arg1)
+{
+    this->ui->name_le->clear();
+    this->ui->direct_le->clear();
+    this->ui->genre_le->clear();
+    this->ui->actor_le->clear();
+    this->ui->capa_le->clear();
+    bool found=false;
+    QString line=arg1;
+    line=line.toLower();
+    QVector <QStringList> info;
+    QStringList movie;
+    QFile movie_file("movies.txt");
+    movie_file.open(QFile ::Text | QFile ::ReadOnly);
+    QTextStream movie_txtstream(&movie_file);
+    while(!movie_txtstream.atEnd())
+    {
+        movie = movie_txtstream.readLine().split(',');
+        info.push_back(movie);
+    }
+    movie_file.close();
+    for (auto ii : info)
+    {
+        for (int i=0;i<10;i++)
+        {
+            if(true==ii[i].startsWith(line))
+            {
+                found=true;
+                break;
+            }
+        }
+        if (found ==true && line != "")
+        {
+            this->ui->name_le->setText(ii[0]);
+            this->ui->direct_le->setText(ii[3]);
+            this->ui->genre_le->setText(ii[1] + ',' + ii[2]);
+            this->ui->actor_le->setText(ii[5] + ',' + ii[6]);
+            this->ui->capa_le->setText(ii[7]);
+            break;
+        }
+        else
+        {
+            found=false;
+        }
+    }
+}
+

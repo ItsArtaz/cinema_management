@@ -31,6 +31,8 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_seach_le_textChanged(const QString &arg1);
+
 private:
     Ui::Booking *ui;
     void mousePressEvent(QMouseEvent *event);

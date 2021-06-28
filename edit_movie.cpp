@@ -99,7 +99,7 @@ void Edit_movie::on_edit_btn_clicked()
         {
             tmp_txtstream << movie_stringlist[0]<<','<<movie_stringlist[1]<<','<<movie_stringlist[2]<<','<<movie_stringlist[3];
             tmp_txtstream <<','<<movie_stringlist[4]<<','<<movie_stringlist[5]<<','<<movie_stringlist[6]<<','<<movie_stringlist[7]<<',';
-            tmp_txtstream <<movie_stringlist[8]<<movie_stringlist[9]<<'\n';
+            tmp_txtstream <<movie_stringlist[8]<<','<<movie_stringlist[9]<<'\n';
         }
         else
         {
@@ -129,6 +129,20 @@ void Edit_movie::on_edit_btn_clicked()
     if (isfound == true)
     {
         QMessageBox ::information(this,"Edited","Movie Edited !!");
+        this->ui->oldactor_le->clear();
+        this->ui->oldcapa_le->clear();
+        this->ui->olddirect_le->clear();
+        this->ui->oldgenre_le->clear();
+        this->ui->oldgp_le->clear();
+        this->ui->oldname_le->clear();
+        this->ui->oldrelease_le->clear();
+        this->ui->newactor_le->clear();
+        this->ui->newcapa_le->clear();
+        this->ui->newdirect_le->clear();
+        this->ui->newgenre_le->clear();
+        this->ui->newgp_le->clear();
+        this->ui->newname_le->clear();
+        this->ui->newrelease_le->clear();
         this->close();
         panel->show();
     }

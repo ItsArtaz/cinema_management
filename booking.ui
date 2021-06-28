@@ -887,5 +887,38 @@ border-radius : 8px;
  <resources>
   <include location="photos.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Booking</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>771</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>808</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Booking</receiver>
+   <slot>showMinimized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>691</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>812</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
