@@ -1,7 +1,7 @@
 #include "menu.h"
 #include "ui_menu.h"
 
-Menu::Menu(QWidget *parent,QMainWindow *mw) :
+Menu::Menu(QWidget *parent,QMainWindow *mw,QString username) :
     QMainWindow(parent),
     ui(new Ui::Menu)
 {
@@ -15,6 +15,8 @@ Menu::Menu(QWidget *parent,QMainWindow *mw) :
     archive = new Archive(0,this);
     booking = new Booking(0,this);
     this->mw=mw;
+    this->username=username;
+    this->ui->l1->setText("Menu-" + this->username);
 }
 void Menu::mousePressEvent(QMouseEvent *event) {
     m_nMouseClick_X_Coordinate = event->x();

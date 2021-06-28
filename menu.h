@@ -20,7 +20,7 @@ class Menu : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit Menu(QWidget *parent = nullptr,QMainWindow *mw=nullptr);
+    explicit Menu(QWidget *parent = nullptr,QMainWindow *mw=nullptr,QString username="");
     ~Menu();
 
 private slots:
@@ -39,6 +39,7 @@ private:
     Archive *archive;
     Booking *booking;
     QMainWindow *mw;
+    QString username;
 };
 
 #endif // MENU_H

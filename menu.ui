@@ -245,13 +245,19 @@ border-radius : 8px;
          </property>
          <property name="minimumSize">
           <size>
-           <width>60</width>
-           <height>44</height>
+           <width>168</width>
+           <height>54</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>168</width>
+           <height>54</height>
           </size>
          </property>
          <property name="font">
           <font>
-           <pointsize>21</pointsize>
+           <pointsize>15</pointsize>
            <weight>75</weight>
            <bold>true</bold>
            <underline>true</underline>
@@ -320,6 +326,13 @@ border-radius : 8px;
             </property>
            </widget>
           </item>
+          <item>
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
           <item alignment="Qt::AlignHCenter">
            <widget class="QPushButton" name="archive_btn">
             <property name="sizePolicy">
@@ -347,6 +360,13 @@ border-radius : 8px;
             </property>
             <property name="text">
              <string>Archive</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>

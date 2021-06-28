@@ -250,6 +250,13 @@ border-radius : 8px;
             </property>
            </widget>
           </item>
+          <item>
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
           <item alignment="Qt::AlignHCenter">
            <widget class="QPushButton" name="delete_btn">
             <property name="sizePolicy">
@@ -274,6 +281,13 @@ border-radius : 8px;
             </property>
            </widget>
           </item>
+          <item>
+           <widget class="Line" name="line_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
           <item alignment="Qt::AlignHCenter">
            <widget class="QPushButton" name="edit_btn">
             <property name="sizePolicy">
@@ -295,6 +309,13 @@ border-radius : 8px;
             </property>
             <property name="text">
              <string>Edit a Movie</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>

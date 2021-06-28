@@ -42,13 +42,13 @@ void Login::on_continue_btn_clicked()
     bool found = false;
     user person ;
     admin_panel = new Admin_panel(0,this->mw);
-    menu = new Menu(0,this->mw);
+    menu = new Menu(0,this->mw,this->ui->lineEdit->text());
     person.username=this->ui->lineEdit->text();
     person.password=this->ui->lineEdit_2->text();
     person.username=person.username.toLower();
     if (person.username=="admin")
     {
-        if (person.password=="12345")
+        if (person.password=="admin")
         {
             this->close();
             admin_panel->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);

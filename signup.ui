@@ -181,7 +181,7 @@ border-radius : 8px;
           <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
+          <enum>QSizePolicy::Expanding</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -191,28 +191,20 @@ border-radius : 8px;
          </property>
         </spacer>
        </item>
-       <item row="0" column="0">
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <item alignment="Qt::AlignHCenter">
-          <widget class="QLabel" name="l3">
-           <property name="font">
-            <font>
-             <pointsize>28</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-             <underline>true</underline>
-            </font>
-           </property>
-           <property name="text">
-            <string>Sign up</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
        <item row="2" column="1">
         <widget class="QWidget" name="gw2" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>315</width>
+           <height>226</height>
+          </size>
+         </property>
          <layout class="QGridLayout" name="gridLayout_2">
           <property name="leftMargin">
            <number>5</number>
@@ -227,8 +219,43 @@ border-radius : 8px;
            <number>5</number>
           </property>
           <property name="horizontalSpacing">
-           <number>6</number>
+           <number>5</number>
           </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="l1">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>USERNAME :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="l2">
+            <property name="font">
+             <font>
+              <pointsize>15</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>PASSWORD :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="Line" name="line">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
           <item row="1" column="0">
            <widget class="QLineEdit" name="le1">
             <property name="sizePolicy">
@@ -254,15 +281,30 @@ border-radius : 8px;
               <pointsize>16</pointsize>
              </font>
             </property>
+            <property name="toolTip">
+             <string>Please Enter Username</string>
+            </property>
             <property name="statusTip">
              <string>Enter Your Username</string>
             </property>
             <property name="placeholderText">
-             <string>Enter invalid Username</string>
+             <string>Enter Username</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="8" column="0">
+           <widget class="QCheckBox" name="cb1">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>I Agree The Terms </string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
            <widget class="QLineEdit" name="le2">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -289,6 +331,9 @@ border-radius : 8px;
               <bold>false</bold>
              </font>
             </property>
+            <property name="toolTip">
+             <string>Please Enter Password</string>
+            </property>
             <property name="statusTip">
              <string>Enter Your Password</string>
             </property>
@@ -296,51 +341,18 @@ border-radius : 8px;
              <enum>QLineEdit::Password</enum>
             </property>
             <property name="placeholderText">
-             <string>Enter invalid Password</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="0">
-           <widget class="QCheckBox" name="cb1">
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>I Agree The Terms </string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="l2">
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>PASSWORD :</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="l1">
-            <property name="font">
-             <font>
-              <pointsize>15</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>USERNAME :</string>
+             <string>Enter Password</string>
             </property>
            </widget>
           </item>
           <item row="7" column="0">
+           <widget class="Line" name="line_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="0">
            <widget class="QLabel" name="l4">
             <property name="font">
              <font>
@@ -349,6 +361,13 @@ border-radius : 8px;
             </property>
             <property name="text">
              <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="Line" name="line_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
             </property>
            </widget>
           </item>
@@ -515,6 +534,28 @@ border-radius : 8px;
           </size>
          </property>
         </spacer>
+       </item>
+       <item row="0" column="0">
+        <widget class="QWidget" name="" native="true">
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item alignment="Qt::AlignHCenter">
+           <widget class="QLabel" name="l3">
+            <property name="font">
+             <font>
+              <pointsize>28</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+              <underline>true</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>Sign up</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
       </layout>
      </widget>

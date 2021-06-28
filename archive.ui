@@ -763,14 +763,17 @@ border-radius : 8px;
                <property name="minimumSize">
                 <size>
                  <width>197</width>
-                 <height>34</height>
+                 <height>28</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
                  <width>197</width>
-                 <height>36</height>
+                 <height>28</height>
                 </size>
+               </property>
+               <property name="toolTip">
+                <string>Enter</string>
                </property>
                <property name="text">
                 <string/>
