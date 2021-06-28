@@ -34,8 +34,7 @@
   <property name="styleSheet">
    <string notr="true">#centralwidget
 {
-border-image: url(:/images/javier-esteban-hAlFVYJ1BWw-unsplash.jpg);
-
+	border-image: url(:/photos/images/javier-esteban-hAlFVYJ1BWw-unsplash.jpg);
 }
 #l1,#l2,#l3,QCheckBox,#l4
 {
@@ -433,8 +432,8 @@ border-radius : 8px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="Photos.qrc">
-              <normaloff>:/icons/minimize.png</normaloff>:/icons/minimize.png</iconset>
+             <iconset resource="photos.qrc">
+              <normaloff>:/icons/p1/minimize.png</normaloff>:/icons/p1/minimize.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -471,8 +470,8 @@ border-radius : 8px;
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="Photos.qrc">
-              <normaloff>:/icons/cross.png</normaloff>:/icons/cross.png</iconset>
+             <iconset resource="photos.qrc">
+              <normaloff>:/icons/p1/cross.png</normaloff>:/icons/p1/cross.png</iconset>
             </property>
             <property name="iconSize">
              <size>
@@ -535,7 +534,7 @@ border-radius : 8px;
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="Photos.qrc"/>
+  <include location="photos.qrc"/>
  </resources>
  <connections>
   <connection>

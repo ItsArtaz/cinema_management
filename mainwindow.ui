@@ -34,7 +34,7 @@
   <property name="styleSheet">
    <string notr="true">#centralwidget
 {
-	border-image: url(:/images/gr-stocks-q8P8YoR6erg-unsplash.jpg);
+	border-image: url(:/photos/images/gr-stocks-q8P8YoR6erg-unsplash.jpg);
 }
 QPushButton
 {
@@ -155,8 +155,8 @@ background-color: rgba(186, 189, 182,0.5);
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="Photos.qrc">
-           <normaloff>:/icons/minimize.png</normaloff>:/icons/minimize.png</iconset>
+          <iconset resource="photos.qrc">
+           <normaloff>:/icons/p1/minimize.png</normaloff>:/icons/p1/minimize.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -190,8 +190,8 @@ background-color: rgba(186, 189, 182,0.5);
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="Photos.qrc">
-           <normaloff>:/icons/cross.png</normaloff>:/icons/cross.png</iconset>
+          <iconset resource="photos.qrc">
+           <normaloff>:/icons/p1/cross.png</normaloff>:/icons/p1/cross.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -400,7 +400,7 @@ background-color: rgba(186, 189, 182,0.5);
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="Photos.qrc"/>
+  <include location="photos.qrc"/>
  </resources>
  <connections>
   <connection>

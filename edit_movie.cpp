@@ -80,38 +80,26 @@ void Edit_movie::on_edit_btn_clicked()
                     {
                         if(movie_stringlist[5]==oldinfo.actor || movie_stringlist[6]==oldinfo.actor)
                         {
-                            isline = false;
+                            isline = true;
                             isfound =true;
                         }
-                        else
-                        {
-                            isline =true;
-                        }
+
                     }
-                    else
-                    {
-                        isline=true;
-                    }
+
                 }
-                else
-                {
-                    isline=true;
-                }
+
             }
-            else
-            {
-                isline=true;
-            }
+
         }
         else
         {
-            isline=true;
+            isline=false;
         }
-        if (isline == true)
+        if (isline == false)
         {
             tmp_txtstream << movie_stringlist[0]<<','<<movie_stringlist[1]<<','<<movie_stringlist[2]<<','<<movie_stringlist[3];
             tmp_txtstream <<','<<movie_stringlist[4]<<','<<movie_stringlist[5]<<','<<movie_stringlist[6]<<','<<movie_stringlist[7]<<',';
-            tmp_txtstream <<movie_stringlist[8]<<'\n';
+            tmp_txtstream <<movie_stringlist[8]<<movie_stringlist[9]<<'\n';
         }
         else
         {
@@ -130,7 +118,7 @@ void Edit_movie::on_edit_btn_clicked()
             }
             else
             {
-                tmp_txtstream <<','<<'\n';
+                tmp_txtstream <<','<<"no group"<<'\n';
             }
         }
     }

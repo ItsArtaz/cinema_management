@@ -12,6 +12,7 @@ SOURCES += \
     add_movie.cpp \
     admin_panel.cpp \
     archive.cpp \
+    booking.cpp \
     delete_movie.cpp \
     edit_movie.cpp \
     login.cpp \
@@ -26,6 +27,7 @@ HEADERS += \
     add_movie.h \
     admin_panel.h \
     archive.h \
+    booking.h \
     delete_movie.h \
     edit_movie.h \
     login.h \
@@ -39,6 +41,7 @@ FORMS += \
     add_movie.ui \
     admin_panel.ui \
     archive.ui \
+    booking.ui \
     delete_movie.ui \
     edit_movie.ui \
     login.ui \
@@ -52,4 +55,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    Photos.qrc
+    photos.qrc

@@ -66,10 +66,18 @@ void Add_movie::on_save_btn_clicked()
     }
     else
     {
-        movie_txtstream <<','<<'\n';
+        movie_txtstream <<','<<"no group"<<'\n';
     }
     movie_file.close();
     QMessageBox ::information(this,"Saved","Movie added !!");
+    this->ui->name_le->clear();
+    this->ui->genre_le->clear();
+    this->ui->released_le->clear();
+    this->ui->actor_le->clear();
+    this->ui->director_le->clear();
+    this->ui->capacity_le->clear();
+    this->ui->group_le->clear();
+    this->ui->checkBox->setChecked(false);
     this->close();
     this->panel->show();
 }

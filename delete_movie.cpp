@@ -62,38 +62,26 @@ void delete_movie::on_pushButton_3_clicked()
                     {
                         if(movie_stringlist[5]==info.actor || movie_stringlist[6]==info.actor)
                         {
-                            writing = false;
+                            writing = true;
                             isfound = true;
                         }
-                        else
-                        {
-                            writing =true;
-                        }
+
                     }
-                    else
-                    {
-                        writing=true;
-                    }
+
                 }
-                else
-                {
-                    writing=true;
-                }
+
             }
-            else
-            {
-                writing=true;
-            }
+
         }
         else
         {
-            writing=true;
+            writing=false;
         }
-        if (writing == true)
+        if (writing == false)
         {
             tmp_txtstream << movie_stringlist[0]<<','<<movie_stringlist[1]<<','<<movie_stringlist[2]<<','<<movie_stringlist[3];
             tmp_txtstream <<','<<movie_stringlist[4]<<','<<movie_stringlist[5]<<','<<movie_stringlist[6]<<','<<movie_stringlist[7]<<','<<movie_stringlist[8];
-            tmp_txtstream <<'\n';
+            tmp_txtstream <<','<<movie_stringlist[9]<<'\n';
         }
     }
     tmp_file.close();
@@ -103,6 +91,11 @@ void delete_movie::on_pushButton_3_clicked()
     if (isfound==true)
     {
         QMessageBox ::information(this,"Deleted","Movie Deleted !!");
+        this->ui->actor_le->clear();
+        this->ui->director_le->clear();
+        this->ui->genre_le->clear();
+        this->ui->name_le->clear();
+        this->ui->released_le->clear();
         this->close();
         panel->show();
     }

@@ -10,6 +10,7 @@
 #include "QDateEdit"
 #include "user.h"
 #include "archive.h"
+#include "booking.h"
 namespace Ui {
 class Menu;
 }
@@ -27,6 +28,8 @@ private slots:
 
     void on_archive_btn_clicked();
 
+    void on_book_btn_clicked();
+
 private:
     Ui::Menu *ui;
     void mousePressEvent(QMouseEvent *event);
@@ -34,6 +37,7 @@ private:
     int m_nMouseClick_X_Coordinate;
     int m_nMouseClick_Y_Coordinate;
     Archive *archive;
+    Booking *booking;
     QMainWindow *mw;
 };
 
